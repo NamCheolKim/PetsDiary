@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block page_title %}
+    {{user_obj.first_name}}'s Profile
+{% endblock page_title %}
+
+{% block content %}
+<div class="container">
+    {% if user_obj.avatar %}
+    <div class="container profile mb-3 rounded-circle" style="background-image: url({{user_obj.avatar.url}}); background-size: cover; background-position: 43% 57%;">
+    </div>
+    {% else %}
+    <div class="container profile mb-3 rounded-circle"><span>{{user_obj.first_name|first}}</span></div>
+    {% endif %}
+    <div class="text-center">
+        <div class="mb-3 font-weight-bold">
+            <span><i class="far fa-envelope"></i> 이메일: {{user_obj.email}}</span>
+        </div>
+        <div class="mb-3 font-weight-bold">
+            <span><i class="far fa-user"></i> 별명: {{user_obj.first_name}}</span>
+        </div>
+        <div class="mb-3 font-weight-bold">
+            <span><i class="fas fa-signature"></i> 이름: {{user_obj.last_name}}</span>
+        </div>
+    </div>
+    
+    {% if user == user_obj %}        
+    <div class="container btn-edit mb-3">
+        <div>
+            <a href="{{user_obj.get_absolute_url2}}" class="btn btn-outline-success"><i class="fas fa-list"></i> 내 게시물</a>
+            <!--users:-->
+            <a href="{% url 'update-profile' %}" class="btn btn-outline-info"><i class="fas fa-cog"></i> 프로필 수정</a>
+        </div>
+        <div class="mt-2 ml-3">
+            <!--users:-->
+            {% if object.login_method == "email" %}
+            <a href="{% url 'update-password' %}" class="btn btn-outline-danger"><i class="fas fa-key"></i> 비밀번호 변경</a>
+            {% endif %}   
+            <a href="{% url 'user-delete' %}" class="btn btn-outline-danger"><i class="fas fa-sign-out-alt"></i> 회원 탈퇴</a>
+        </div>
+    </div>
+    {% else %}
+    <div class="btn-edit mb-3">
+        <a href="{{user_obj.get_absolute_url2}}" class="btn btn-outline-success"><i class="fas fa-list"></i> {{user_obj.first_name}}의 게시물</a>
+    </div>
+    {% endif %}
+    
+    
+</div>
+{% endblock %}
+    
