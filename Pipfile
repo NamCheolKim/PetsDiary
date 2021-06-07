@@ -10,6 +10,7 @@ django-summernote = "*"
 django-seed = "*"
 pillow = "*"
 requests = "*"
+sentry-sdk = "==0.13.2"
 
 [dev-packages]
 awsebcli = "*"
