@@ -178,7 +178,7 @@ EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-#Sentry
+# Sentry
 if not DEBUG:
     sentry_sdk.init(
         dsn=os.environ.get("SENTRY_URL"),
