@@ -14,6 +14,7 @@ requests = "*"
 [dev-packages]
 awsebcli = "*"
 flake8 = "*"
+pipenv-to-requirements = "*"
 
 [requires]
 python_version = "3.7"
