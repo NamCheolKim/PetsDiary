@@ -9,3 +9,6 @@ class CustomModelManager(models.Manager):
         except self.model.DoesNotExist:
             return None
 
+
+class CustomUserManager(CustomModelManager, UserManager):
+    pass
