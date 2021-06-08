@@ -3,6 +3,7 @@ from django.shortcuts import reverse
 from django.db import models
 from core import managers as core_managers
 
+
 class User(AbstractUser):
 
     """Custom User Model Definition"""

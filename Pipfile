@@ -5,17 +5,21 @@ name = "pypi"
 
 [packages]
 pathspec = "*"
-django = "==2.1.15"
+django = "==2.2.5"
 django-summernote = "*"
 django-seed = "*"
+django-storages = "*"
 pillow = "*"
 requests = "*"
 sentry-sdk = "==0.13.2"
+boto3 = "*"
 
 [dev-packages]
-awsebcli = "*"
 flake8 = "*"
-pipenv-to-requirements = "*"
+black = "*"
 
 [requires]
 python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
