@@ -123,7 +123,7 @@ def kakao_callback(request):
 def naver_login(request):
     client_id = os.environ.get("NAVER_ID")
     state = ""
-    redirect_uri = "http://127.0.0.1:8000/users/login/naver/callback"
+    redirect_uri = "http://petsdiary.eba-nyct3p2m.ap-northeast-2.elasticbeanstalk.com/users/login/naver/callback"
     return redirect(
         f"https://nid.naver.com/oauth2.0/authorize?client_id={client_id}&response_type=code&redirect_uri={redirect_uri}&state={state}"
     )
