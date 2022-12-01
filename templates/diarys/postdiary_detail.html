@@ -44,14 +44,7 @@
       <br/> <br/>
       {% endif %}
       <!-- Preview image-->
-      {% if postdiary.photo %}
-      <img class="img-fluid rounded" src="{{ postdiary.photo.url }}" width="300" height="300" alt="" />
-      <hr />
       <p class="lead">{{ postdiary.content | safe }}</p>
-      {% else %}
-      <!-- Post content-->
-      <p class="lead mb-1">{{ postdiary.content | safe }}</p>
-      {% endif %}
       <hr />
       <a href="{% url 'diarys:list' %}" class="btn btn-outline-success"><i class="fas fa-list-ul"></i> 목록으로</a>
 

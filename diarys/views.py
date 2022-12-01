@@ -87,6 +87,7 @@ def diary_delete(request, pk):
     return redirect(reverse("diarys:list"))
 
 
+# 댓글작성
 @login_required(login_url="login")
 def create_comment(request, pk):
 
@@ -111,6 +112,7 @@ def create_comment(request, pk):
     return render(request, "diarys/detail.html", context)
 
 
+# 댓글 수정
 @login_required(login_url="login")
 def comment_modify(request, pk):
 
@@ -141,6 +143,7 @@ def comment_modify(request, pk):
     return render(request, "diarys/comment_form.html", context)
 
 
+# 댓글 삭제
 @login_required(login_url="login")
 def comment_delete(request, pk):
 

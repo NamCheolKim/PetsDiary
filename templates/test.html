@@ -1,0 +1,928 @@
+<!-- 폼메일 시작 -->
+
+
+<link rel="StyleSheet" href="/{{$template}}/inc/formmail/formmail_{{$com_formmail.code}}.css" type="text/css">
+<script language="javascript" src="/cjs/formmail.js?com_formmail_id={{$com_formmail.code}}&template={{$template}}">
+</script>
+
+
+<form id="contact-form" name='com_formmail' method='post' action='{{$com_formmail.path}}?{{$com_formmail.query}}'
+enctype='multipart/form-data' onsubmit="return false;">
+
+
+<input type='hidden' name='com_formmail{{$com_formmail.code}}_basic' value='send'>
+<input type='hidden' name='template' value='{{$template}}'>
+
+
+<div id="sec_padding">
+<div id="board_h3">
+<p>교육실 대관 문의</p>
+</div>
+
+
+<table border='0' cellspacing='0' cellpadding='0' width="100%" bgcolor='{{$com_formmail.table_bgcolor}}'>
+<input type='hidden' name='com_formmail{{$com_formmail.code}}_basic' value='send'>
+<input type='hidden' name='template' value='{{$template}}'>
+
+
+<tbody>
+<tr class="input_obj">
+<td>
+<table width="100%">
+<tbody>
+
+
+<tr height="30">
+<td align="center" class="formmail_title_bgcolor">
+<font>성명</font>
+</td>
+<td class="formmail_cell_bgcolor1">
+<input type="text" class="formmail_border" name="name" maxlength="100"
+                                            size="50" placeholder="" value="">
+                                    </td>
+</tr>
+<tr height="30">
+<td align="center" class="formmail_title_bgcolor">
+<font>연락처</font>
+</td>
+<td style="padding-left:10" class="formmail_cell_bgcolor2">
+<input  type="text" class="formmail_border" name="add5" maxlength="15"
+                                            size="15" placeholder="" value="">
+                                    </td>
+</tr>
+<tr height="30">
+<td align="center" class="formmail_title_bgcolor">
+<font>이메일</font>
+</td>
+<td style="padding-left:10" class="formmail_cell_bgcolor1">
+<input type="text" class="formmail_border" name="receiver_email" size="70"
+                                            placeholder="" value="">
+<br>
+                                    </td>
+</tr>
+<tr height="30">
+<td align="center" class="formmail_title_bgcolor">
+<font>기업/단체명</font>
+</td>
+<td style="padding-left:10" class="formmail_cell_bgcolor2">
+<input type="text" class="formmail_border" name="add1" size="70"
+                                            placeholder="" value="">
+<br>
+                                    </td>
+</tr>
+<tr height="30">
+<td align="center" class="formmail_title_bgcolor">
+<font>행사명</font>
+</td>
+<td class="formmail_cell_bgcolor3">
+<input type="text" class="formmail_border1" name="description" maxlength="20" size="72"
+                                            placeholder="" value="">
+<br>
+                                    </td>
+</tr>
+<tr height="30">
+<td align="center" class="formmail_title_bgcolor">
+<font>공간구분</font>
+</td>
+<td style="padding-left:10" class="formmail_cell_bgcolor1">
+<select id="cate" name="category">
+                                            <option value="0" selected="">기타</option>";
+                                             <option value="1" selected="">회의실</option>";
+                                             <option value="2" selected="">강당</option>";
+                                  
+                                        </select>
+</td>
+</tr>
+
+
+<tr height="30">
+<td align="center" class="formmail_title_bgcolor">
+<font>참여인원</font> 
+</td>
+<td class="formmail_cell_bgcolor2">
+<input type="text" class="formmail_border" name="add2" maxlength="20" size="20" value="">
+
+
+<input type="hidden" name="add2_attr" value="1">
+                                    </td>
+</tr>
+
+
+<tr height="400">
+<td class="formmail_cell_bgcolor4">
+<textarea type="text" class="formmail_border" name="add4" maxlength="100" size="20"  placeholder="사용 목적 및 사용 기간 또는 문의 내용을 입력하세요." value="">
+</textarea type="hidden" name="add4_attr" value="1">
+                                    </td>
+                                </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                <tr class="input_obj">
+                                    <td class="input_obj" class="formmail_cell_bgcolor" id="input_obj" colspan="2"
+                                        style="padding : 10px">
+                                        <table  cellspacing="0" cellpadding="0" width="100%">
+                                            <tbody >
+                                                <tr class="input_obj">
+                                                    <td  align="left" id="box_text1" style="border:0px">· 개인정보의 수집 및
+                                                        이용목적</td>
+                                                    <td id="box_text" align="right" style="border:0px"><input
+                                                            id="box" type="checkbox" name="com_formmail_check_safe">
+                                                        개인정보의 수집 및 이용목적에 동의합니다.</td>
+                                                </tr>
+                                                <tr  class="input_obj">
+                                                    <td class="input_obj" colspan="2" style="border:0px"><textarea readonly=""
+                                                            style="font-size:12px; width:100%; padding:5px"
+                                                            rows="9">▶ 개인정보의 수집 및 이용목적
+- 서비스 이용에 따른 본인식별, 실명확인, 가입의사 확인, 연령제한 서비스 이용
+- 고지사항 전달, 불만처리 의사소통 경로 확보, 물품배송 시 정확한 배송지 정보 확보
+- 신규 서비스 등 최신정보 안내 및 개인맞춤서비스 제공을 위한 자료
+- 기타 원활한 양질의 서비스 제공 등
+▶ 수집하는 개인정보의 항목
+- 이름, 이메일, 주민등록번호, 주소, 연락처, 핸드폰번호, 그 외 선택항목
+▶ 개인정보의 보유 및 이용기간
+- 원칙적으로 개인정보의 수집 또는 제공받은 목적 달성 시 지체 없이 파기합니다.
+- 다만, 원활한 서비스의 상담을 위해 상담 완료 후 내용을 3개월간 보유할 수 있으며
+전자상거래에서의 소비자보호에 관한 법률 등 타법률에 의해 보존할 필요가 있는 경우에는 일정기간 보존합니다.
+</textarea></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="formmail_btn" align="center">
+<button id="contact-us-button"  type="submit" class="btn btn-success" onclick="com_formmail_formCheck(); return false;">보내기</button>
+</div>
+</td>
+</tr>
+</tbody>
+
+
+</table>
+</div>
+
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+<!-- //폼메일 끝 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+.pc {
+display: block;
+}
+
+
+.mo {
+display: none;
+}
+
+
+/* 기본 텍스트 스타일 */
+.formmail_txt {
+font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 텍스트박스 스타일 */
+.formmail_border {
+font-size: 14px;
+font-family: 'Montserrat',
+/*sans-serif,*/
+'NanumSquareR';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 항목칸 스타일 */
+.formmail_title_bgcolor {
+background-color: #91ae97;
+border-bottom: solid;
+border-color: white;
+border-width: 1px;
+}
+
+
+
+
+
+
+
+
+.formmail_title_bgcolor {
+color: #fff;
+font-weight: 600;
+font-family: 'Montserrat',
+/*sans-serif,*/
+'NanumSquareR';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 입력칸 스타일 */
+.formmail_cell_bgcolor {
+background-color: #FFFFFF;
+font-size: 16;
+color: #333333;
+padding-left: 10;
+font-family: 'Montserrat',
+/*sans-serif,*/
+'NanumSquareR';
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 텍스트에어리어 스타일 */
+.formmail_textarea_style {
+font-size: 15px;
+color: #333333;
+}
+
+
+
+
+
+
+
+
+
+
+#box {
+width: 20px;
+height: 20px;
+padding: 0;
+margin: 0;
+display: inline-block;
+line-height: 5px;
+position: relative;
+top: 3px;
+}
+
+
+
+
+
+
+
+
+#box_text {
+font-size: 16px;
+padding-bottom: 5px;
+line-height: 20px;
+}
+
+
+
+
+
+
+
+
+#cate {
+font-family: 'Montserrat',
+/*sans-serif,*/
+'NanumSquareR';
+}
+
+
+
+
+
+
+
+
+#file_sel {
+font-family: 'Montserrat',
+/*sans-serif,*/
+'NanumSquareR';
+}
+
+
+
+
+
+
+
+
+.btn-success {
+background-color: #91ae97;
+}
+
+
+
+
+
+
+
+
+#board_h2 {
+font-family: 'Montserrat',
+/*sans-serif,*/
+'NanumSquareR';
+color: #91AE97;
+font-size: 25px;
+font-weight: 600;
+
+
+
+
+
+
+}
+
+
+#board_h2 p {
+padding: 3px;
+border-left: #91AE97;
+border-left-width: 5px;
+border-left: solid;
+padding-left: 12px;
+}
+
+
+
+
+
+
+
+
+#sec_padding {
+padding-left: 15%;
+padding-right: 15%;
+}
+
+
+
+
+
+
+
+
+#input_obj {
+border-left: none;
+}
+
+
+
+
+
+
+
+
+#box_text {
+font-size: ;
+}
+
+
+
+
+
+
+
+
+.formmail_cell_bgcolor4 textarea {
+margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+< !-- //폼메일 끝 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+
+/* 기본 텍스트 스타일 */
+.formmail_txt {
+font-size: 16px;
+}
+
+
+::placeholder {
+font-size: 16px;
+}
+
+
+
+
+
+
+
+
+tr {
+display: inline;
+}
+
+
+input {
+width: 100%;
+height: 100%;
+margin-left: 5px;
+}
+
+
+select {
+width: 100%;
+margin-left: 5px;
+}
+
+
+.formmail_title_bgcolor {
+width: 100px;
+}
+
+
+.formmail_cell_bgcolor1 {
+width: 345px;
+padding-right: 5px;
+}
+
+
+.formmail_cell_bgcolor2 {
+width: 345px;
+}
+
+
+.formmail_cell_bgcolor3 {
+width: 795px;
+}
+
+
+.formmail_cell_bgcolor3 input {
+margin-left: 5px;
+}
+
+
+.formmail_cell_bgcolor4 {
+width: 900px;
+height: 200px;
+}
+
+
+.formmail_cell_bgcolor4 input {
+margin: 0px;
+}
+
+
+.formmail_cell_bgcolor4 textarea {
+height: 100%;
+}
+
+
+.input_obj {
+display: block;
+}
+
+
+
+
+
+
+
+
+/* 텍스트박스 스타일 */
+.formmail_border {
+font-size: 14px;
+font-family: 'Montserrat',
+/*sans-serif,*/
+'NanumSquareR';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 항목칸 스타일 */
+.formmail_title_bgcolor {
+background-color: #91ae97;
+border-bottom: solid;
+border-color: white;
+border-width: 1px;
+}
+
+
+
+
+
+
+
+
+.formmail_title_bgcolor {
+color: #fff;
+font-weight: 600;
+font-family: 'Montserrat',
+/*sans-serif,*/
+'NanumSquareR';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 입력칸 스타일 */
+.formmail_cell_bgcolor {
+background-color: #FFFFFF;
+font-size: 16;
+color: #333333;
+padding-left: 10;
+font-family: 'Montserrat',
+/*sans-serif,*/
+'NanumSquareR';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 텍스트에어리어 스타일 */
+.formmail_textarea_style {
+font-size: 15px;
+color: #333333;
+}
+
+
+
+
+
+
+
+
+
+
+#box {
+width: 20px;
+height: 20px;
+padding: 0;
+margin: 0;
+display: inline-block;
+line-height: 5px;
+position: relative;
+top: 3px;
+}
+
+
+
+
+
+
+
+
+.pc #box_text {
+
+
+padding-left: 270px;
+font-size: 16px;
+padding-bottom: 5px;
+line-height: 20px;
+}
+
+
+
+
+
+
+
+
+#cate {
+font-family: 'Montserrat',
+/*sans-serif,*/
+'NanumSquareR';
+}
+
+
+
+
+
+
+
+
+#file_sel {
+font-family: 'Montserrat',
+/*sans-serif,*/
+'NanumSquareR';
+}
+
+
+
+
+
+
+
+
+.btn-success {
+background-color: #91ae97;
+}
+
+
+
+
+
+
+
+
+#board_h3 {
+font-family: 'Montserrat',
+/*sans-serif,*/
+'NanumSquareR';
+color: #91AE97;
+font-size: 32px !important;
+font-weight: 600;
+
+
+
+
+}
+
+
+
+
+
+
+
+
+#sec_padding {
+padding-left: 15%;
+padding-right: 15%;
+
+
+}
+
+
+
+
+
+
+
+
+#input_obj {
+border-left: none;
+}
+
+
+
+
+
+
+
+
+#box_text {
+font-size: ;
+margin-left: 40%;
+display: inline-block;
+
+
+}
+
+
+#box_text1 {
+font-size: ;
+
+
+display: inline-block;
+
+
+}
+
+
+
+
+@media all and (max-width:768px) {
+#sec_padding {
+padding-left: 9%;
+padding-right: 9%;
+}
+
+
+
+
+::placeholder {
+font-size: 13px;
+}
+
+
+
+
+
+
+.formmail_cell_bgcolor1 {
+width: 300px;
+padding-right: 0px;
+}
+
+
+.formmail_cell_bgcolor2 {
+width: 300px;
+}
+
+
+.formmail_cell_bgcolor3 {
+width: 300px;
+}
+
+
+.formmail_cell_bgcolor3 input {
+margin-left: 5px;
+}
+
+
+.formmail_cell_bgcolor4 {
+width: 820px;
+height: 200px;
+margin-right: 5px;
+}
+
+
+.formmail_cell_bgcolor4 input {
+margin: 0px;
+}
+
+
+.formmail_cell_bgcolor4 textarea {
+height: 100%;
+}
+
+
+#box_text {
+font-size: 10px;
+padding-bottom: 0px !important;
+padding-left: 10px !important;
+display: inline;
+margin-left: 0%;
+
+
+}
+
+
+#box_text1 {
+font-size: 10px;
+display: inline;
+
+
+}
+
+
+#box {
+width: 10px;
+height: 10px;
+
+
+
+
+}
+
+
+#input_obj {
+padding: 0px !important;
+}
+
+
+
+
+
+
+}
+</style>

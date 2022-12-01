@@ -21,6 +21,7 @@
                 </label> -->
             </div>
             <button class="btn btn-lg btn-outline-info btn-block" type="submit"><i class="fas fa-cog"></i> 프로필 수정</button>
+            <a href="{% url 'user-delete' %}" class="btn btn-lg btn-outline-danger btn-block"><i class="fas fa-sign-out-alt"></i> 회원 탈퇴</a>
         </div>
     </form>
     {% endblock %}
